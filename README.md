@@ -43,7 +43,9 @@ npm start
 
 ### 使用
 
-打开浏览器访问：`http://localhost:3000`
+**本地访问：** `http://localhost:3000`
+
+**外网访问（在线演示）：** `https://12wc0wo892531.vicp.fun`
 
 ---
 
