@@ -70,6 +70,8 @@
       <div style="margin-top: 15px;">
         <button class="secondary" onclick="loadHistory()">刷新</button>
         <button class="secondary" onclick="clearHistory()">清空历史</button>
+        <button class="secondary" onclick="exportHistory('md')">导出 Markdown</button>
+        <button class="secondary" onclick="exportHistory('pdf')">导出 PDF</button>
       </div>
     </div>
 
@@ -186,6 +188,75 @@
     function clearPrompt() {
       document.getElementById('prompt').value = '';
       document.getElementById('response').textContent = '等待输入...';
+    }
+
+    // 导出对话历史
+    async function exportHistory(format) {
+      try {
+        const res = await fetch('/api/history');
+        const history = await res.json();
+        
+        if (history.length === 0) return alert('暂无历史记录可导出');
+        
+        if (format === 'md') {
+          // 导出为 Markdown
+          let md = '# Ollama Tools 对话历史\n\n';
+          md += `导出时间：${new Date().toLocaleString('zh-CN')}\n\n`;
+          md += `---\n\n`;
+          
+          history.reverse().forEach((h, i) => {
+            md += `## 对话 ${i + 1}\n`;
+            md += `**时间:** ${new Date(h.timestamp).toLocaleString('zh-CN')}\n`;
+            md += `**模型:** ${h.model}\n\n`;
+            md += `### 问:\n${h.messages[0]?.content || '无'}\n\n`;
+            md += `### 答:\n${h.response?.content || '无'}\n\n`;
+            md += `---\n\n`;
+          });
+          
+          downloadFile(md, 'ollama-history.md', 'text/markdown');
+        } else if (format === 'pdf') {
+          // 导出为 PDF（使用浏览器打印）
+          let printContent = '<html><head><title>Ollama Tools 对话历史</title>';
+          printContent += '<style>body{font-family:Arial,sans-serif;padding:20px;} h1{color:#333;} .conversation{margin:20px 0;padding:15px;border:1px solid #ddd;border-radius:8px;} .meta{color:#666;font-size:12px;} h3{color:#e94560;}</style>';
+          printContent += '</head><body>';
+          printContent += '<h1>🦙 Ollama Tools 对话历史</h1>';
+          printContent += `<p>导出时间：${new Date().toLocaleString('zh-CN')}</p><hr>`;
+          
+          history.reverse().forEach((h, i) => {
+            printContent += `<div class="conversation">`;
+            printContent += `<h3>对话 ${i + 1}</h3>`;
+            printContent += `<p class="meta"><strong>时间:</strong> ${new Date(h.timestamp).toLocaleString('zh-CN')} | <strong>模型:</strong> ${h.model}</p>`;
+            printContent += `<p><strong>问:</strong></p><p>${h.messages[0]?.content || '无'}</p>`;
+            printContent += `<p><strong>答:</strong></p><p>${h.response?.content || '无'}</p>`;
+            printContent += `</div><hr>`;
+          });
+          
+          printContent += '</body></html>';
+          
+          // 打开新窗口打印
+          const printWindow = window.open('', '_blank');
+          printWindow.document.write(printContent);
+          printWindow.document.close();
+          printWindow.print();
+        }
+        
+        alert('导出成功！');
+      } catch (e) {
+        alert('导出失败：' + e.message);
+      }
+    }
+
+    // 下载文件辅助函数
+    function downloadFile(content, filename, mimeType) {
+      const blob = new Blob([content], { type: mimeType });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
     }
 
     // 初始化
