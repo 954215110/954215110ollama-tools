@@ -8,7 +8,7 @@
 
 ### 1. GitHub Sponsors
 
-[成为赞助者 →](https://github.com/sponsors/谢轩)
+[成为赞助者 →](https://github.com/sponsors/954215110)
 
 ### 2. 爱发电
 
