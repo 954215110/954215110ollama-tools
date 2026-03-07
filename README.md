@@ -4,8 +4,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/954215110/ollama-tools)](https://github.com/954215110/ollama-tools/stargazers)
+[![文章](https://img.shields.io/badge/掘金-文章-blue)](https://juejin.cn/post/7614205951298322478)
 
-**如果你觉得这个项目有用，请考虑 [⭐ Star](https://github.com/954215110/ollama-tools) 或 [💖 赞助](#-sponsor)**
+**如果你觉得这个项目有用，请考虑 [⭐ Star](https://github.com/954215110/ollama-tools)、[📖 掘金文章](https://juejin.cn/post/7614205951298322478) 或 [💖 赞助](#-sponsor)**
 
 ---
 
