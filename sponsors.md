@@ -8,11 +8,11 @@
 
 ### 1. GitHub Sponsors
 
-[成为赞助者 →](https://github.com/sponsors/yourusername)
+[成为赞助者 →](https://github.com/sponsors/谢轩)
 
 ### 2. 爱发电
 
-[前往爱发电 →](https://afdian.net/@yourusername)
+[前往爱发电 →](https://afdian.net/@谢轩)
 
 ### 3. 微信/支付宝
 
@@ -67,9 +67,8 @@
 
 ## 联系方式
 
-- Email: your@email.com
-- Twitter: @yourusername
-- 微信：yourwechat
+- Email: 954215110@qq.com
+- 微信：x7123138
 
 ---
 

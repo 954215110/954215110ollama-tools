@@ -3,9 +3,9 @@
 > 增强版 Ollama Web UI - 让本地 AI 更好用
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Stars](https://img.shields.io/github/stars/yourusername/ollama-tools)](https://github.com/yourusername/ollama-tools/stargazers)
+[![Stars](https://img.shields.io/github/stars/谢轩/ollama-tools)](https://github.com/谢轩/ollama-tools/stargazers)
 
-**如果你觉得这个项目有用，请考虑 [⭐ Star](https://github.com/yourusername/ollama-tools) 或 [💖 赞助](#-sponsor)**
+**如果你觉得这个项目有用，请考虑 [⭐ Star](https://github.com/谢轩/ollama-tools) 或 [💖 赞助](#-sponsor)**
 
 ---
 
@@ -95,8 +95,8 @@ npm start
 
 | 平台 | 链接 |
 |------|------|
-| **GitHub Sponsors** | [赞助我](https://github.com/sponsors/yourusername) |
-| **爱发电** | [afdian.net/@yourusername](https://afdian.net/@yourusername) |
+| **GitHub Sponsors** | [赞助我](https://github.com/sponsors/谢轩) |
+| **爱发电** | [afdian.net/@谢轩](https://afdian.net/@谢轩) |
 | **微信/支付宝** | [查看收款码](./sponsors.md) |
 
 ### 🏆 赞助者名单
@@ -115,10 +115,9 @@ MIT License © 2026
 
 ## 📬 联系方式
 
-- Email: your@email.com
-- Twitter: @yourusername
-- 微信群：扫码加入
+- Email: 954215110@qq.com
+- 微信：x7123138
 
 ---
 
-**Made with ❤️ by 你**
+**Made with ❤️ by 谢轩**
