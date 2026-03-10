@@ -182,6 +182,16 @@ docker run -d -p 3000:3000 \
   ollama-tools
 ```
 
+### 方式 4：云服务器部署（24 小时在线）
+
+想让 Ollama Tools 24 小时运行并分享给团队使用？推荐阿里云服务器：
+
+- 🎁 **新用户特惠：** ¥89/年起
+- 🚀 **推荐配置：** 4 核 8G（跑 7B 模型够用）
+- 👉 **领取优惠：** [阿里云云服务器特惠](https://www.aliyun.com/minisite/goods?userCode=2g9nf6lu)
+
+详细部署教程：[☁️ 云服务器部署指南](./ALIYUN_AFFILIATE.md)
+
 ---
 
 ## 📚 配套教程
@@ -292,11 +302,11 @@ ollama serve
    # 示例：https://your-domain.vicp.fun
    ```
 
-2. **云服务器部署：**
-   ```bash
-   # 部署到阿里云/腾讯云
-   # 配置 Nginx 反向代理
-   ```
+2. **云服务器部署（24 小时在线）：**
+   - 🎁 阿里云新用户 ¥89/年起
+   - 🚀 推荐配置：4 核 8G
+   - 👉 [领取优惠](https://www.aliyun.com/minisite/goods?userCode=2g9nf6lu)
+   - 📖 详细教程：[☁️ 云服务器部署指南](./ALIYUN_AFFILIATE.md)
 
 3. **Docker 部署：**
    ```bash
